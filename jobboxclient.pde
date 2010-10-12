@@ -2,8 +2,8 @@
   Jobbox client
 
  Circuit:
- * Rotary Switches connected to digital pins 1-32
- * Ethernet shield attached to pins 10, 11, 12, 13
+ * Rotary Switches connected to digital pins
+ * Ethernet shield attached
  
  created 15 March 2010
  modified 23 July 2010
@@ -14,11 +14,21 @@
  by Rattle
  http://rattlecentral.com
 
- This code is in the public domain.
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  
  */
 
-//#include <PString.h>
 #include <SPI.h>
 #include <Ethernet.h>
 
@@ -41,7 +51,6 @@ int box2[] = {30,31,32,33,34,35,36,37};
 int box3[] = {38,39,40,41,42,43,44,45};
 
 // initialize the library instance:
-//Client client(server, 3000);
 Client client(server, 80);
 
 // define the last button pressed for each box
@@ -158,8 +167,8 @@ void sendData(int box, int position) {
     // you can do that online at many sites, including this one:
     // http://www.tools4noobs.com/online_php_functions/base64_encode/
     // once encoded, it'll look like a random string of characters  
-  //  client.print("Authorization: Basic XXXXXXXXXXXXXXXXXXXXXXXX\n");
-  //  client.print("Content-type: application/x-www-form-urlencoded\n");
+    //  client.print("Authorization: Basic XXXXXXXXXXXXXXXXXXXXXXXX\n");
+    //  client.print("Content-type: application/x-www-form-urlencoded\n");
     // content length of the status message that follows below:
     //client.print(strlen(data));
     //client.println("Connection: Close\n");
